@@ -43,15 +43,15 @@ namespace ListFilm {
             bool blnExit = false;
             while (blnExit == false) {
                 Console.Clear(); //Efface l'écran
-                Console.WriteLine("Menu CINEMA");
-                Console.WriteLine("===========");
+                Console.WriteLine("             Menu CINEMA");
+                Console.WriteLine("             ===========");
                 Console.WriteLine();
-                Console.WriteLine("1. Liste des films par jour");
-                Console.WriteLine("2. Liste des films pour une journée");
-                Console.WriteLine("3. Journée d'un film spécifique");
-                Console.WriteLine("4. Sortir");
+                Console.WriteLine(" 1. Liste des films par jour");
+                Console.WriteLine(" 2. Liste des films pour une journée");
+                Console.WriteLine(" 3. Journée d'un film spécifique");
+                Console.WriteLine(" 4. Sortir");
                 Console.WriteLine();
-                Console.WriteLine("Faite votre choix: {1, 2, 3, 4}");
+                Console.WriteLine(" Faite votre choix: {1, 2, 3, 4}");
 
                 string strChoix = "";
                 while (strChoix == "") { 
@@ -142,18 +142,18 @@ namespace ListFilm {
         //Console.WriteLine("2. Liste des films pour une journée");
         public static void FilmForDayX(List<Films> plstFilms) {
             Console.Clear(); //Efface l'écran
-            Console.WriteLine("Films par jour");
-            Console.WriteLine("==============");
+            Console.WriteLine(" Films par jour");
+            Console.WriteLine(" ==============");
             Console.WriteLine();
-            Console.WriteLine("1. Dimanche");
-            Console.WriteLine("2. Lundi");
-            Console.WriteLine("3. Mardi");
-            Console.WriteLine("4. Mercredi");
-            Console.WriteLine("5. Jeudi");
-            Console.WriteLine("6. Vendredi");
-            Console.WriteLine("7. Samedi");
+            Console.WriteLine(" 1. Dimanche");
+            Console.WriteLine(" 2. Lundi");
+            Console.WriteLine(" 3. Mardi");
+            Console.WriteLine(" 4. Mercredi");
+            Console.WriteLine(" 5. Jeudi");
+            Console.WriteLine(" 6. Vendredi");
+            Console.WriteLine(" 7. Samedi");
             Console.WriteLine();
-            Console.WriteLine("Faite votre choix: (1-7)");
+            Console.WriteLine(" Faite votre choix: (1-7)");
 
             JoursSemaine JourDuFilm = JoursSemaine.Dimanche;
             string strChoix = "";
@@ -219,8 +219,8 @@ namespace ListFilm {
         //Console.WriteLine("3. Journée d'un film spécifique");
         public static void FilmDay(List<Films> plstFilms) {
             Console.Clear(); //Efface l'écran
-            Console.WriteLine("Choisissez votre film");
-            Console.WriteLine("=====================");
+            Console.WriteLine(" Choisissez votre film");
+            Console.WriteLine(" =====================");
             Console.WriteLine();
 
             //Lister les films disponible
@@ -237,12 +237,12 @@ namespace ListFilm {
                     DansList.Add(objFilm.NomFilm);
                     lngLetter++;  //On incrémente la lettre
                     strLetter = ((char)lngLetter).ToString();
-                    Console.WriteLine(strLetter + ". " + objFilm.NomFilm);
+                    Console.WriteLine(" " + strLetter + ". " + objFilm.NomFilm);
                 }
             }
             
             Console.WriteLine();
-            Console.WriteLine("Faite votre choix: (A-" + strLetter + ")");
+            Console.WriteLine(" Faite votre choix: (A-" + strLetter + ")");
             byte bytMaxChoice = (byte)Convert.ToChar(strLetter);
 
             int bytChoix = 0;
