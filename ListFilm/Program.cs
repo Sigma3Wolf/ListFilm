@@ -144,17 +144,17 @@ namespace ListFilm {
             Console.WriteLine("Films par jour");
             Console.WriteLine("==============");
             Console.WriteLine();
-            Console.WriteLine("1. Lundi");
-            Console.WriteLine("2. Mardi");
-            Console.WriteLine("3. Mercredi");
-            Console.WriteLine("4. Jeudi");
-            Console.WriteLine("5. Vendredi");
-            Console.WriteLine("6. Samedi");
-            Console.WriteLine("7. Dimanche");
+            Console.WriteLine("1. Dimanche");
+            Console.WriteLine("2. Lundi");
+            Console.WriteLine("3. Mardi");
+            Console.WriteLine("4. Mercredi");
+            Console.WriteLine("5. Jeudi");
+            Console.WriteLine("6. Vendredi");
+            Console.WriteLine("7. Samedi");
             Console.WriteLine();
             Console.WriteLine("Faite votre choix: (1-7)");
 
-            JoursSemaine JourDuFilm = JoursSemaine.Lundi;
+            JoursSemaine JourDuFilm = JoursSemaine.Dimanche;
             string strChoix = "";
             while (strChoix == "") {
                 ConsoleKeyInfo KeyInput = Console.ReadKey(true);
@@ -164,27 +164,27 @@ namespace ListFilm {
 
                 switch (strChoix) {
                     case "D1":
-                        JourDuFilm = JoursSemaine.Lundi;
-                        break;
-                    case "D2":
-                        JourDuFilm = JoursSemaine.Mardi;
-                        break;
-                    case "D3":
-                        JourDuFilm = JoursSemaine.Mercredi;
-                        break;
-                    case "D4":
-                        JourDuFilm = JoursSemaine.Jeudi;
-                        break;
-                    case "D5":
-                        JourDuFilm = JoursSemaine.Vendredi;
-                        break;
-                    case "D6":
-                        JourDuFilm = JoursSemaine.Samedi;
-                        break;
-                    case "D7":
                         JourDuFilm = JoursSemaine.Dimanche;
                         break;
-
+                    case "D2":
+                        JourDuFilm = JoursSemaine.Lundi;
+                        break;
+                    case "D3":
+                        JourDuFilm = JoursSemaine.Mardi;
+                        break;
+                    case "D4":
+                        JourDuFilm = JoursSemaine.Mercredi;
+                        break;
+                    case "D5":
+                        JourDuFilm = JoursSemaine.Jeudi;
+                        break;
+                    case "D6":
+                        JourDuFilm = JoursSemaine.Vendredi;
+                        break;
+                    case "D7":
+                        JourDuFilm = JoursSemaine.Samedi;
+                        break;
+                    
                     default:
                         //Choix invalide, on recommence
                         strChoix = "";
